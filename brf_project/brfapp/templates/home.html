@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Bus Route Finder App By Raj</title>
+    <style>
+        * {font-size:40px;font-family:cambria;font-weight:bold;background-color:lightyellow;}
+     
+	h1{font-size:50px;background-color:black;color:white;width:650px;}
+	textarea{resize:none;}
+	h2{color:darkred;}
+    </style>
+    
+    
+</head>
+<meta name="viewport" content="width=device-width">
+<body>
+    <center>
+        <h1> Bus Route Finder</h1>
+        <form method="POST">
+	{% csrf_token %}
+<br>
+
+            <input type="text" name="route" placeholder="Enter Bus no. between 1 to 30 " required style="width:560px;background-color:white;"><br><br>
+            <input type="submit" value="Find" style="background-color:white;">
+        </form>
+        <h2 class="result">{{ msg }}</h2>	
+    </center>
+</body>
+</html>
